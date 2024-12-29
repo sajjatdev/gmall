@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ir_cron_gmall_sale_order" model="ir.cron">
+        <field name="name">Gmall: sync sale order</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="state">code</field>
+        <field name="code">model._sync_sale_order_mongodb()</field>
+        <field name="interval_number">10</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+    </record>
+    <record id="ir_cron_gmall_product_template" model="ir.cron">
+        <field name="name">Gmall: sync product template</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="state">code</field>
+        <field name="code">model._sync_product_template_mongodb()</field>
+        <field name="interval_number">10</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+    </record>
+
+    <record id="ir_cron_gmall_product_category" model="ir.cron">
+        <field name="name">Gmall: sync product Category</field>
+        <field name="model_id" ref="product.model_product_category"/>
+        <field name="state">code</field>
+        <field name="code">model._sync_product_category()</field>
+        <field name="interval_number">10</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+    </record>
+
+
+    <record id="gmall_product_not_found" model="product.product">
+        <field name="name">Product Not Found</field>
+        <field name="categ_id" ref="product.product_category_all"/>
+        <field name="standard_price">0</field>
+        <field name="list_price">0</field>
+        <field name="detailed_type">consu</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="uom_po_id" ref="uom.product_uom_unit"/>
+    </record>
+
+    <record id="gmall_product_template_not_found" model="product.template">
+        <field name="name">Product Not Found</field>
+        <field name="categ_id" ref="product.product_category_all"/>
+        <field name="standard_price">0</field>
+        <field name="list_price">0</field>
+        <field name="detailed_type">consu</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        <field name="product_variant_id" ref="gmall_product_not_found"/>
+    </record>
+
+
+</odoo>

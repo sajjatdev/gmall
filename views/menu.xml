@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Main Menu Item -->
+        <menuitem id="vendor_main_menu" name="Vendor" sequence="5"/>
+
+        <!-- Submenu Items -->
+        <menuitem id="product_template_menu" name="Product Template" parent="odoie_gmall.vendor_main_menu" sequence="1"
+                  action="odoie_gmall.product_template_action"/>
+        <menuitem id="product_category_menu" name="Product Category" parent="odoie_gmall.vendor_main_menu" sequence="2"
+                  action="odoie_gmall.product_category_action"/>
+    </data>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_size,product.size,model_product_size,,1,1,1,1
+access_product_color,product.color,model_product_color,,1,1,1,1
+access_product_favorite,product.favorite,model_product_favorite,,1,1,1,1
+access_cart,cart,model_cart,,1,1,1,1
+access_product_image,product.image,model_product_image,,1,1,1,1
